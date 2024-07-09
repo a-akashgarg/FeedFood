@@ -10,9 +10,9 @@ const Navbar = () => {
         <h3 className="text-xl font-bold text-gray-600">
           {new Date().toUTCString().slice(0, 16)}
         </h3>
-        <h1 className="text-2xl font-bold ">FeedFood</h1>
+        <h1 className="text-2xl font-bold ">Flavoro Foods</h1>
       </div>
-      <div>
+      <div className="flex items-center space-x-4">
         <input
           type="search"
           name="search"
@@ -20,8 +20,13 @@ const Navbar = () => {
           placeholder="Search here"
           autoComplete="off"
           onChange={(e) => dispatch(setSearch(e.target.value))}
-          className="p-3 border border-gray-400 text-sm rounded-lg outline-none w-full lg:w-[25vw]"
-        />
+          className="p-3 border border-gray-400 text-sm rounded-lg outline-none w-full lg:w-[25vw]"/>
+        <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
+          Login
+        </button>
+        <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
+          Signup
+        </button>
       </div>
     </nav>
   );
